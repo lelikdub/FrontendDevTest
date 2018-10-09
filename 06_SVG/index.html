@@ -31,15 +31,25 @@
         <svg width="1024" height="768" xmlns="http://www.w3.org/2000/svg" xmlns:amcharts="http://amcharts.com/ammap" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
             <defs>
                 <style type="text/css">
-                    .land {
+                   	.land {
                         fill: #CCCCCC;
                         fill-opacity: 1;
                         stroke: white;
                         stroke-opacity: 1;
                         stroke-width: 0.5;
-                    }
-
-           
+                    	}
+			.land:hover
+			{
+			fill:#90b5b3;
+			}
+			.land_active
+			{
+			fill:#ff0017;
+			fill-opacity: 1;
+                        stroke: white;
+                        stroke-opacity: 1;
+                        stroke-width: 0.5;
+			}			           
                 </style>
 
                 <amcharts:ammap projection="mercator" leftLongitude="19.784141" topLatitude="81.857875" rightLongitude="190.348146" bottomLatitude="41.202033"></amcharts:ammap>
@@ -140,7 +150,10 @@
     <script src="js/jquery.ui.touch-punch.min.js"></script>
     <script>
         $(function () {
-        });
+		$('path').click(function(){
+        	this.style.fill = "#ff0017";
+    		});
+	});
     </script>
 </body>
 </html>
