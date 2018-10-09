@@ -12,11 +12,25 @@
     <script src="js/jquery-1.8.1.min.js"></script>
     <script src="js/jquery-ui.min.js"></script>
     <script src="js/jquery.ui.touch-punch.min.js"></script>
+    <script src="js/circle-progress.js"></script>
     <script>
         $(function () {
 
         });
     </script>
+    <style>
+	    #circle , #circle1, #circle11  {
+	    position: absolute;
+			left: 360px;
+			top: 53px;
+			}
+		#circle2
+		{
+			position: absolute;
+			left: 315px;
+			top: 9px;	
+		}
+	 </style>
 </head>
 
 <body>
@@ -31,5 +45,50 @@
             </div>
         </div>
     </div>
+    <script>
+        var nOfOpen = 2;
+        $( ".wrapper" ).click(function(){
+	    if (nOfOpen!=1){
+		$(".arrow_box").addClass('active');
+		$('#circle').circleProgress({
+		    value: 0.0833,
+		    size: 500,
+		    thickness:40,
+		    startAngle: (Math.PI/12)*10,
+			fill: {color:'#0681c4'},	
+			emptyFill:"rgba(0, 0, 0, 0)"
+		  	}).on('circle-animation-end', function() {
+				$('#circle1').circleProgress({
+			    value: 0.583,
+			    size: 500,
+			    thickness:40,
+			    startAngle: -Math.PI,
+				fill: {color:'#99cbea'},
+				emptyFill:"rgba(0, 0, 0, 0)"
+				}).on('circle-animation-end', function() {
+					$('#circle11').circleProgress({
+				    value: 0.25,
+				    size: 500,
+				    thickness:40,
+				    startAngle: Math.PI/12*2,
+					fill: {gradient:[['#3d9cc3', .5],['#0681c4',.5]], gradientAngle:3.14},
+					emptyFill:"rgba(0, 0, 0, 0)"
+					}).on('circle-animation-end', function() {   
+						setTimeout(function(){
+						$('#circle2').circleProgress({
+					    value: 0.25,
+					    size: 590,
+					    thickness:40,
+						fill: {gradient: [['#0068ab', .5], ['#16498b', .5]], gradientAngle:0.5 },	
+					    emptyFill:"rgba(0, 0, 0, 0)"
+					    	})
+					    nOfOpen=1;
+						},2000);
+					})	
+				}) 
+			})
+		};
+		})	
+    </script>
 </body>
 </html>
