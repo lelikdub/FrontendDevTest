@@ -14,6 +14,21 @@
     <script src="js/jquery.ui.touch-punch.min.js"></script>
     <script>
         $(function () {
+                $('.drag_red').draggable({
+			        axis: "y",
+			        containment: ".drag_red_wrapper",
+			        scroll: false,
+			        drag:function(e,u){
+				          pos_drag = u.position.top+90;
+						  $('.map > li').each(function(){
+						  	var yPos = $(this).position().top; 
+						  	if (yPos>pos_drag&&yPos<=pos_drag+48)
+						  	{ $(this).addClass("red")}
+						  	else
+						  	{$(this).removeClass('red');}
+					    	})
+						}
+			       })
         });
     </script>
 </head>
