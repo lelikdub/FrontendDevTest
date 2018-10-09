@@ -11,14 +11,54 @@
 </head>
 <body>
     <div id="background">
-
+    	<div class="container_css">
+		   	<div class="box_css css_FadeOut">CSS3 FadeIn FadeOut</div>
+			<div class="box_css css_rotate">CSS3 Rotate</div>
+			<div class="box_css css_scale">CSS3 Scale</div>
+			<div class="box_css css_move">CSS3 Move</div>
+	    </div>
+	    <div class="container_button">
+			<div class="button css_start">CSS3 start</div>  
+			<div class="button jquery_start">Jquery start</div>  
+			<div class="button css_reset">CSS3 reset</div> 
+			<div class="button jquery_reset">Jquery reset</div>
+	    </div>
+	    <div class="container_jquery">
+		    <div class="box_jquery hidden">
+		   	<div class="jquery_FadeIn">Jquery FadeIn </div></div>
+		   	<div class="box_jquery hidden">
+			<div class="jquery_FadeOut">Jquery FadeOut</div></div>
+			<div class="box_jquery jquery_animate">Jquery Move</div>
+			<div class="box_jquery jquery_Zoom">Jquery Zoom</div>
+	    </div>
     </div>
     <script src="js/jquery-2.1.1.min.js"></script>
     <script src="js/jquery-ui-1.10.4.min.js"></script>
     <script src="js/jquery.ui.touch-punch.min.js"></script>
     <script>
         $(function () {
-           
+           $('.css_start').on('click', function(){
+               $('.box_css').each(function(i){
+                   $(this).addClass('start');
+               })
+           });
+       $('.css_reset').on('click', function(){
+               $('.box_css').each(function(i){
+                   $(this).removeClass('start');
+               })
+           });
+		   $('.jquery_start').click(function() {
+	          $( ".jquery_FadeIn" ).fadeIn(1000);
+			  $( ".jquery_FadeOut" ).fadeOut(1000);
+			  $( ".jquery_animate").animate({left: '-180px',top:'180px'},"slow");
+			  $( ".jquery_Zoom" ).animate({width : 120,height : 120});;
+			});
+		$('.jquery_reset').click(function() {
+			$( ".jquery_FadeIn" ).fadeOut(1000);
+			$( ".jquery_FadeOut" ).fadeIn(1000);
+			$( ".jquery_animate").animate({left: '0px',top:'0px'},"slow");
+			$( ".jquery_Zoom" ).animate({width : 80,height : 80});;
+         
         });
     </script>
 </body>
