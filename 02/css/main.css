@@ -125,6 +125,7 @@ body {
     position: relative;
     margin: 0;
     padding: 0;
+    color: #fff;
 }
 
 #background {
@@ -133,5 +134,214 @@ body {
     position: absolute;
     left: 0px;
     top: 0px;
-    background-color: aliceblue
+    background-color: aliceblue;
+    display: flex;
+}
+.container_css
+{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	flex-wrap: wrap;
+	flex: 2;
+	height: 320px;
+}
+.box_css
+{	
+	padding: 20px;
+	border-radius: 17px;
+	width: 80px;
+	height: 80px;
+	
+}
+.css_FadeOut{
+    opacity: 0;
+    background: #ac009b;
+}
+
+.css_FadeOut.start{
+     -webkit-animation: fadeout 3s ease forwards;
+    animation: fadeout 3s ease forwards;
+}
+
+@-webkit-keyframes fadeout {
+    0%   {opacity: 0}
+    50%  {opacity: 1}
+    100% {opacity: 0}
+}
+
+.@keyframes fadeout {
+     0%   {opacity: 0}
+    50%  {opacity: 1}
+    100% {opacity: 0}
+}
+
+.css_rotate{
+    transform: rotate(0);
+    background: #61a3ff;
+}
+
+.css_rotate.start{
+    -webkit-animation: rotate 3s ease;
+    animation: rotate 3s ease;
+}
+
+@-webkit-keyframes rotate {
+    0%   {transform: rotate(0)}
+    100% {transform: rotate(360deg)}
+}
+
+.@keyframes rotate {
+    0%   {transform: rotate(0)}
+    100% {transform: rotate(360deg)}
+}
+
+.css_scale{
+    background: #ff7920;
+   
+}
+
+.css_scale.start{
+    -webkit-animation: scale 3s ease;
+    animation: scale 3s ease;
+}
+
+@-webkit-keyframes scale {
+    0%   {transform: scale(1)}
+    50%  {transform: scale(1.8)}
+    100% {transform: scale(1)}
+}
+
+.@keyframes scale {
+    0%   {transform: scale(1)}
+    50%  {transform: scale(1.8)}
+    100% {transform: scale(1)}
+}
+
+.css_move{
+    position: relative;
+    background: #b37200;
+}
+
+.css_move.start{
+    -webkit-animation: move 3s ease;
+    animation: move 3s ease;
+}
+
+@-webkit-keyframes move {
+    0%   {top: 0; left:0px;}
+    50%  {top: 20px;left:20px;}
+    100% {top: 0px;left:0px;}
+}
+
+.@keyframes move {
+    0%   {top: 0; left:0px;}
+    50%  {top: 20px;left:20px;}
+    100% {top: 0px;left:0px;}
+}
+.container_button
+{	
+	display: flex;
+	flex: 2;
+	justify-content: space-around;
+	align-items: center;
+	flex-wrap: wrap;
+	height: 320px;
+}
+.button
+{	
+	padding: 25px;
+	border-radius: 17px;
+}
+.css_start
+{
+	background: #0db51b;
+}
+.css_start:hover
+{
+	background:#00ef8c;
+	color: green;
+	
+}
+.css_reset
+{
+	background: #c07700;
+}
+.css_reset:hover
+{
+	background:#ffce7e;
+	color: #c07700;
+	
+}
+.jquery_start
+{
+	background: #0db51b;
+}
+.jquery_start:hover
+{
+	background:#00ef8c;
+	color: green;
+	
+}
+.jquery_reset
+{
+	background: #c07700;
+}
+.jquery_reset:hover
+{
+	background:#ffce7e;
+	color: #c07700;
+	
+}
+
+.container_jquery
+{
+	display: flex;
+	flex: 2;
+	justify-content: space-around;
+	align-items: center;
+	flex-wrap: wrap;
+	height: 320px;
+}
+.box_jquery
+{	
+	border-radius: 17px;
+}
+.box_jquery.hidden
+{	
+	border-radius: 17px;
+	width: 120px;
+	height: 120px;
+
+}
+.jquery_FadeIn{
+	padding: 20px;
+	border-radius: 17px;
+	width: 80px;
+	height: 80px;
+	display: none;
+    background: #d50961;
+}
+.jquery_FadeOut{
+	width: 80px;
+	height: 80px;
+	padding: 20px;
+	border-radius: 17px;
+    opacity: 100;
+    background: #030772;
+}
+.jquery_Zoom{
+		position: relative;
+	    background: #a50000;
+	   	padding: 20px;
+		width: 80px;
+		height: 80px;
+}
+.jquery_animate{
+		position: relative;
+	    background: #ff30b0;
+	   	padding: 20px;
+		width: 80px;
+		height: 80px;
+
 }
