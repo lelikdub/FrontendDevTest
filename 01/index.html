@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <script src='js/jquery-2.1.1.min.js'></script>
+    <script src='js/jquery-ui-1.10.4.min.js'></script>
+    <script src='js/slider.js'></script>
+    <title></title>
+    <link href="css/main.css" rel="stylesheet">
+</head>
+<body class="page">
+    <div class="container">
+		<div class="container__header">
+		Скольким своим пациентам в течение последнего месяца <br>
+		Вы поставили диагноз мКРР?
+		</div>
+		<div class="chart">		
+			<div class="chart__item chart__item_patients">
+				<span>12</span>
+			</div>
+			<div class="chart__item chart__item_kras">
+				<span>6</span>
+			</div>
+			<div class="chart__item chart__item_nras">
+				<span>3</span>
+			</div>
+		</div>
+		<div class="slider__name slider__name_patients">
+			Число пациентов		
+		</div>
+			<div class="slider_patients">
+				<div class="slide_line">
+                    <div class="point_drag">
+                        <a class="ui-slider-handle ui-state-default ui-corner-all"><div class='num'></div></a>
+                    </div>
+				</div>
+			</div>
+		<div class="slider__name slider__name_kras">
+			KRAS
+		</div>
+			<div class="slider_kras">
+				<div class="slide_line">
+                    <div class="point_drag">
+                        <a class="ui-slider-handle ui-state-default ui-corner-all"><div class='num'></div></a>
+                    </div>
+				</div>
+			</div>
+		<div class="slider__name slider__name_nras">
+			NRAS
+		</div>
+			<div class="slider_nras">
+				<div class="slide_line">
+                    <div class="point_drag">
+                        <a class="ui-slider-handle ui-state-default ui-corner-all"><div class='num'></div></a>
+                    </div>
+				</div>
+			</div>
+    </div>
+</body>
+</html>
